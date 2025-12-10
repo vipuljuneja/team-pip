@@ -1,65 +1,94 @@
-import Image from "next/image";
+'use client'
+
+import { useState, useEffect } from 'react';
+import NavBar from '@/components/sections/NavBar';
+import Hero from '@/components/sections/hero';
+import About from '@/components/sections/about';
+import Work from '@/components/sections/Work';
+import Contact from '@/components/sections/Contact';
+import PipProject from '@/components/sections/PipProject';
+import Footer from '@/components/sections/Footer';
+
+type ActiveSection = 'home' | 'about' | 'projects' | 'contact';
 
 export default function Home() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+  const [selectedProject, setSelectedProject] = useState<string | null>(null);
+  const [activeSection, setActiveSection] = useState<ActiveSection>('home');
+
+  // Handle hash changes from URL
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.slice(1);
+      if (hash === 'about') {
+        setActiveSection('about');
+      } else if (hash === 'projects') {
+        setActiveSection('projects');
+      } else if (hash === 'contact') {
+        setActiveSection('contact');
+      } else if (hash === 'home' || hash === '') {
+        setActiveSection('home');
+      }
+    };
+
+    // Check initial hash
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  // Scroll to top when project changes
+  useEffect(() => {
+    if (selectedProject) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [selectedProject]);
+
+  const handleProjectSelect = (project: string) => {
+    setSelectedProject(project);
+    // Scroll to top when selecting a project
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleProjectBack = () => {
+    setSelectedProject(null);
+    setActiveSection('projects');
+  };
+
+  const handleSectionChange = (section: ActiveSection) => {
+    setActiveSection(section);
+    setSelectedProject(null);
+    // Update URL hash
+    window.location.hash = section === 'home' ? '' : section;
+    // Scroll to top when section changes
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // If a project is selected, show only NavBar, PipProject, and Footer
+  if (selectedProject) {
+    return (
+      <>
+        <NavBar activeSection={activeSection} onSectionChange={handleSectionChange} />
+        <PipProject 
+          onBack={handleProjectBack} 
+          currentProject={selectedProject}
+          onNextProject={handleProjectSelect}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+        <Footer />
+      </>
+    );
+  }
+
+  // Show only the active section
+  return (
+    <>
+      <NavBar activeSection={activeSection} onSectionChange={handleSectionChange} />
+      {activeSection === 'home' && <Hero />}
+      {activeSection === 'about' && <About />}
+      {activeSection === 'projects' && <Work onProjectSelect={handleProjectSelect} />}
+      {activeSection === 'contact' && <Contact />}
+      {activeSection !== 'home' && <Footer />}
+    </>
+  )
 }
