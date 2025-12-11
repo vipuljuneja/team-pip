@@ -72,10 +72,7 @@ export default function About() {
       >
         <Container >
           <p className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-tight text-center">
-           Suro Kim is a UX/UI and product designer specializing in user
-    experience, interaction design, and digital storytelling. She brings
-    post-production and project management experience, applying narrative,
-    precision, and collaboration to craft meaningful digital experiences.
+          Suro is a UX/UI designer focused on creating engaging and meaningful interactive experiences. With a background in film production and theory, she leverages narrative thinking, user-centered design, and collaborative problem-solving to craft intuitive and immersive interfaces.
           </p>
         </Container>
       </section>
@@ -99,7 +96,7 @@ export default function About() {
             {/* Text - Second on mobile, left on desktop (bottom-aligned) */}
             <div className="flex flex-col justify-start md:justify-end md:order-1">
               <p className="text-base md:text-lg leading-relaxed text-left">
-                Suro focuses on UX, UI, and product design to create purposeful, inclusive, and accessible interfaces. She collaborates across disciplines to deliver consistent, user-centered experiences, while exploring 3D to add spatial and interactive depth.
+              Suro focuses on UX and UI design to create purposeful and user-centered interactive experiences. Drawing on her background in film production and project coordination, she combines narrative thinking, collaborative communication, and design problem-solving to craft intuitive interfaces, while exploring interactive storytelling to add depth and engagement.
               </p>
             </div>
           </div>
