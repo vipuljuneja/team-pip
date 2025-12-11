@@ -204,7 +204,7 @@ export default function PipProject({ onBack, currentProject, onNextProject }: Pi
               className={`w-full h-auto md:object-contain object-cover md:origin-center ${
                 currentProject === "PARKSMART" || currentProject === "FITFOUND"
                   ? "md:max-h-[600px] lg:max-h-[700px]" 
-                  : "md:max-h-[300px] md:scale-160"
+                  : "md:max-h-[300px] md:scale-140"
               }`}
             />
           </div>
