@@ -40,8 +40,6 @@ export default function Footer() {
               <a href="https://www.linkedin.com/in/suro-kim" target="_blank" rel="noopener noreferrer" className="text-base md:text-lg font-semibold uppercase text-black hover:opacity-70 transition-opacity">
                 LINKEDIN
               </a>
-             
-            
             </div>
           </div>
         </div>
@@ -49,7 +47,7 @@ export default function Footer() {
         {/* Copyright on mobile (below links) */}
         <div className="mt-8 md:hidden text-center">
           <p className="text-xs text-black">
-            ©2025 Pimsirin Prasartset. All rights reserved.
+            ©2025 Suro Kim. All rights reserved.
           </p>
         </div>
       </Container>

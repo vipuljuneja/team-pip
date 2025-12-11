@@ -12,7 +12,9 @@ export default function Work({ onProjectSelect }: WorkProps) {
     "PIP",
     "CUBIE",
     "IMPACTO",
-    "YUMMATE"
+    "YUMMATE",
+    "8X6",
+    "POETRY DAY"
   ];
 
   return (

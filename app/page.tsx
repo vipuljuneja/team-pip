@@ -87,7 +87,7 @@ export default function Home() {
       {activeSection === 'home' && <Hero />}
       {activeSection === 'about' && <About />}
       {activeSection === 'projects' && <Work onProjectSelect={handleProjectSelect} />}
-      {activeSection === 'contact' && <Contact />}
+      {activeSection === 'contact' && <Contact onSectionChange={handleSectionChange} />}
       {activeSection !== 'home' && <Footer />}
     </>
   )

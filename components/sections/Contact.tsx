@@ -4,7 +4,11 @@ import { useState } from 'react';
 import Container from "@/components/ui/Container";
 import Image from 'next/image';
 
-export default function Contact() {
+interface ContactProps {
+  onSectionChange?: (section: 'home' | 'about' | 'projects' | 'contact') => void;
+}
+
+export default function Contact({ onSectionChange }: ContactProps) {
   const [showForm, setShowForm] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -17,9 +21,10 @@ export default function Contact() {
   const contactItems = [
     {
       label: "RESUME",
-      href: "/V_resume.pdf",
-      external: true,
-      isMessage: false
+      href: "#about",
+      external: false,
+      isMessage: false,
+      isResume: true
     },
     {
       label: "LINKEDIN",
@@ -39,6 +44,9 @@ export default function Contact() {
     if (item.isMessage) {
       e.preventDefault();
       setShowForm(true);
+    } else if (item.isResume && onSectionChange) {
+      e.preventDefault();
+      onSectionChange('about');
     }
   };
 
