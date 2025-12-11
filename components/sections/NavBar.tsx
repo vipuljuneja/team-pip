@@ -47,7 +47,7 @@
                 onClick={() => handleNavClick('home')}
                 className="text-lg md:text-2xl font-bold uppercase"
               >
-                Poppy Prasartset
+                Vipul Juneja
               </button>
             )}
             {isOpen && <div></div>}

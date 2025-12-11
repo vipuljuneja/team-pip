@@ -18,24 +18,18 @@ export default function About() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const experiences = [
+  const education = [
     {
-      title: "DUBBING ARCHIVAL ASSET SPECIALIST",
-      dates: "2023 - 2024",
-      company: "@IYUNO | FREELANCE",
-      description: "Executed full-cycle Linguistic QC and ARS audits to ensure linguistic and technical accuracy of dubbed assets. Managed screen performance by optimizing Forced Narrative placement and verifying archival timecode synchronization."
+      title: "PDD IN WEB AND MOBILE DEV",
+      dates: "2024 – 2026",
+      institution: "LANGARA COLLEGE",
+      description: "Post-Degree Diploma program focusing on full-stack web and mobile development. Developed projects including PIP (React Native mobile app with AI integration), FitFound (MERN stack job-matching platform), and Park Smart (Firebase-based parking booking system). Gained expertise in JavaScript, TypeScript, React, Node.js, Express.js, MongoDB, Firebase, and various third-party API integrations."
     },
     {
-      title: "PROJECT COORDINATOR",
-      dates: "2021 - 2023",
-      company: "@COMPANY | TYPE",
-      description: "Coordinated multiple projects simultaneously, ensuring timely delivery and quality standards. Managed cross-functional teams and maintained clear communication channels between stakeholders."
-    },
-    {
-      title: "CUSTOMER EXPERIENCE PROFESSIONAL",
-      dates: "2021 - 2021",
-      company: "@COMPANY | TYPE",
-      description: "Developed and maintained web applications using modern frameworks. Collaborated with senior developers to implement new features and improve existing functionality."
+      title: "BACHELOR'S OF COMPUTER APPLICATION",
+      dates: "JUNE 2020 - JUNE 2023",
+      institution: "PANJAB UNIVERSITY",
+      description: "Bachelor's degree in Computer Application covering fundamental computer science concepts, programming languages, database management, software engineering, and web technologies. Built a strong foundation in algorithms, data structures, and software development methodologies."
     }
   ];
 
@@ -59,11 +53,8 @@ export default function About() {
         className="min-h-screen flex items-center md:pt-[30vh]  justify-center bg-white pt-24"
       >
         <Container >
-          <p className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-tight text-center">
-           Poppy Prasartset is a UX/UI and product designer specializing in user
-    experience, interaction design, and digital storytelling. She brings
-    post-production and project management experience, applying narrative,
-    precision, and collaboration to craft meaningful digital experiences.
+          <p className="text-2xl md:text-3xl lg:text-4xl font-medium leading-tight text-center">
+           I am a full-stack developer specializing in building modern web and mobile applications. I work with MERN stack, React Native, Firebase, and various AI APIs to create scalable, user-centered solutions. My projects include PIP, a mobile app with AI-powered feedback systems, FitFound, a job-matching platform, and Park Smart, a parking space booking application.
           </p>
         </Container>
       </section>
@@ -76,8 +67,8 @@ export default function About() {
             <div className="flex items-start md:items-center justify-center md:order-2">
               <div className="w-full aspect-square flex items-center justify-center">
                 <Image 
-                  src="/poppy.png" 
-                  alt="Poppy Prasartset"
+                  src="/vipul2.jpg" 
+                  alt="Vipul Juneja"
                   width={800}
                   height={800}
                   className="w-full h-full object-contain"
@@ -87,22 +78,22 @@ export default function About() {
             {/* Text - Second on mobile, left on desktop (bottom-aligned) */}
             <div className="flex flex-col justify-start md:justify-end md:order-1">
               <p className="text-base md:text-lg leading-relaxed text-left">
-                Poppy focuses on UX, UI, and product design to create purposeful, inclusive, and accessible interfaces. She collaborates across disciplines to deliver consistent, user-centered experiences, while exploring 3D to add spatial and interactive depth.
+                I specialize in full-stack development using JavaScript, TypeScript, React, Node.js, and Express.js. I have experience integrating third-party APIs including OpenAI, Deepgram, MediaPipe, and D-ID for AI-powered features. I work with Firebase for authentication and real-time databases, MongoDB for data storage, and deploy applications on AWS and Vercel. My approach combines clean code architecture, efficient database design, and responsive UI development to deliver high-quality digital solutions.
               </p>
             </div>
           </div>
         </Container>
       </section>
 
-      {/* 3. Experience */}
+      {/* 3. Education */}
       <section 
-        id="experience" 
+        id="education" 
         className="min-h-screen flex py-16 bg-white"
       >
         <Container>
-          <h1 className="text-3xl md:text-4xl font-bold mb-12 uppercase text-black">Experiences</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-12 uppercase text-black">Education</h1>
           <div className="flex flex-col gap-0">
-            {experiences.map((exp, index) => {
+            {education.map((edu, index) => {
               // On mobile: use click, on desktop: use hover
               const isOpen = isMobile ? openIndex === index : hoverIndex === index;
               
@@ -128,7 +119,7 @@ export default function About() {
                         : 'text-3xl md:text-4xl lg:text-5xl text-black'
                       }
                     `}>
-                      {exp.title}
+                      {edu.title}
                     </h2>
                     <p className={`
                       font-bold transition-all duration-300 ease-in-out
@@ -137,7 +128,7 @@ export default function About() {
                         : 'text-2xl md:text-4xl lg:text-5xl text-black md:text-right'
                       }
                     `}>
-                      {exp.dates}
+                      {edu.dates}
                     </p>
                   </div>
                   <div className={`
@@ -148,7 +139,7 @@ export default function About() {
                       text-sm md:text-base mb-2
                       ${isOpen ? 'text-gray-300' : 'text-gray-600'}
                     `}>
-                      {exp.company}
+                      {edu.institution}
                     </p>
                     <div className={`
                       pt-2 border-t
@@ -158,7 +149,7 @@ export default function About() {
                         text-sm md:text-base leading-relaxed
                         ${isOpen ? 'text-white' : 'text-black'}
                       `}>
-                        {exp.description}
+                        {edu.description}
                       </p>
                     </div>
                   </div>
@@ -175,35 +166,35 @@ export default function About() {
         className=" mb-[20vh] bg-white text-black"
       >
         <Container>
-          <h1 className="text-3xl md:text-4xl font-bold mb-12 uppercase text-black">Skills</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-12 uppercase text-black">Development Skills</h1>
           <div className="border-b border-black mb-8"></div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6">
             {/* Column 1 */}
             <div className="flex flex-col gap-4">
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">FIGMA</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">PHOTOSHOP</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">SKETCHUP</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">AFTER EFFECTS</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">REACT</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">NEXT.JS</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">TYPESCRIPT</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">JAVASCRIPT</p>
             </div>
             {/* Column 2 */}
             <div className="flex flex-col gap-4">
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">MIRO</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">ILLUSTRATOR</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">NOMAD SCULPT</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">PREMIERE PRO</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">NODE.JS</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">EXPRESS</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">PYTHON</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">MONGODB</p>
             </div>
             {/* Column 3 */}
             <div className="flex flex-col gap-4">
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">FRAMER</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">INDESIGN</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">WOMP</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">CAPCUT</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">HTML/CSS</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">TAILWIND CSS</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">POSTGRESQL</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">REST API</p>
             </div>
             {/* Column 4 */}
             <div className="flex flex-col gap-4">
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">WORDPRESS</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">PROCREATE</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">HTML/CSS/JS</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">GRAPHQL</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">FIREBASE</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">REDUX</p>
             </div>
           </div>
         </Container>

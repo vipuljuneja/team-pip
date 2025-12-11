@@ -10,10 +10,10 @@ export default function Footer() {
           {/* Left Side - Email & Copyright */}
           <div className="flex flex-col gap-4 md:justify-between items-center md:items-start">
             <p className="text-base md:text-lg font-semibold uppercase text-black">
-              PIMSIRIN.P@OUTLOOK.CO.TH
+              vipuljuneja6@gmail.com
             </p>
             <p className="hidden md:block text-xs md:text-sm text-black">
-              ©2025 Pimsirin Prasartset. All rights reserved.
+              ©2025 Vipul Juneja. All rights reserved.
             </p>
           </div>
 
@@ -53,7 +53,7 @@ export default function Footer() {
         {/* Copyright on mobile (below links) */}
         <div className="mt-8 md:hidden text-center">
           <p className="text-xs text-black">
-            ©2025 Pimsirin Prasartset. All rights reserved.
+            ©2025 Vipul Juneja. All rights reserved.
           </p>
         </div>
       </Container>

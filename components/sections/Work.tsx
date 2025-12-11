@@ -10,9 +10,8 @@ interface WorkProps {
 export default function Work({ onProjectSelect }: WorkProps) {
   const projects = [
     "PIP",
-    "CUBIE",
-    "IMPACTO",
-    "YUMMATE"
+    "FITFOUND",
+    "PARKSMART"
   ];
 
   return (

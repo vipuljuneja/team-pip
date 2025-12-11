@@ -16,7 +16,7 @@ interface Feature {
 }
 
 export default function PipProject({ onBack, currentProject, onNextProject }: PipProjectProps) {
-  const projects = ["PIP", "CUBIE", "IMPACTO", "YUMMATE"];
+  const projects = ["PIP", "FITFOUND", "PARKSMART"];
   
   const currentIndex = projects.indexOf(currentProject);
   const nextProject = currentIndex < projects.length - 1 ? projects[currentIndex + 1] : null;
@@ -25,116 +25,89 @@ export default function PipProject({ onBack, currentProject, onNextProject }: Pi
     PIP: {
       title: "PIP",
       projectType: "CAPSTONE PROJECT",
-      role: "LEAD PRODUCT DESIGNER | CO-PM",
+      role: "LEAD DEVELOPER",
       firstImage: "/first.png",
-      firstDescription: "PIP is a mobile app that helps people with social anxiety practice everyday interactions in a safe, private space. It offers AI feedback on both verbal and non-verbal communication and uses a level-based system to help users build confidence step by step in real-life situations.",
+      firstDescription: "PIP is a mobile application built with React Native and Metro bundler, featuring AI-powered feedback systems for social anxiety support. The platform integrates real-time voice processing using Deepgram API, facial expression analysis with MediaPipe, and AI avatars through D-ID API. Built with TypeScript for type safety and Material-UI for consistent design.",
       secondImage: "/second.png",
-      secondDescription: "Over 7% of Canadians aged 15 and up—over 2.5 million people—struggle with social anxiety, a number that has more than doubled in the past 20 years. Many overthink how they appear, fear being judged, and replay small mistakes, leading them to avoid conversations or hold back from opportunities—not from a lack of desire to connect, but from fear of making mistakes.",
+      secondDescription: "Developed using MERN stack with Node.js and Express.js for the backend, MongoDB and Supabase for cloud database management, and Firebase for authentication. The application implements RESTful APIs for session management, user progress tracking, and AI feedback processing. Hosted on Amazon AWS and Vercel for scalable infrastructure.",
       thirdImage: "/third.png",
-      thirdDescription: "PIP recognizes that people with social anxiety often withdraw, doubt themselves, and need a safe space to build confidence. Through gentle practice, supportive feedback, and reflection tools, it helps users slowly face social situations and feel more comfortable connecting with others.",
+      thirdDescription: "Integrated multiple third-party APIs including OpenAI for natural language processing, Deepgram for speech-to-text conversion, MediaPipe for facial recognition, and D-ID for AI avatar generation. The backend uses Express.js with TypeScript, while the frontend leverages React Native with Material-UI components. Authentication is handled through Firebase, and data is stored in MongoDB and Supabase for optimal performance.",
+      demoVideo: "/pipdemo.mp4",
       featureImages: ["/fourth1.png", "/fourth2.png", "/fourth3.png"],
       features: [
         {
           number: "01",
-          title: "COMPREHENSIVE AI-POWERED FEEDBACK",
-          description: "Users choose a scenario, and PIP gently adapts to them—listening to their voice, noticing their expressions, and highlighting what they're already doing well. Soft, encouraging suggestions help them grow at a comfortable pace. Practice starts with simple voice exercises with the PIP mascot, then moves to a friendly human character, and eventually a warm, human-like avatar for a fully immersive, supportive experience."
+          title: "AI INTEGRATION & THIRD-PARTY APIs",
+          description: "Integrated multiple AI services including OpenAI for natural language processing, Deepgram API for real-time speech recognition and transcription, MediaPipe for facial expression analysis, and D-ID API for AI-powered avatar generation. Developed custom API wrappers and error handling for seamless third-party service integration."
         },
         {
           number: "02",
-          title: "ENCOURAGEMENT AND REFLECTIVE SPACE",
-          description: "After each session, PIP sends a warm letter from the mascot, celebrating small wins users might have overlooked and offering gentle guidance for what to try next. Alongside it, users can review a simple session transcript or write personal reflections, making it easy to track progress without pressure. By turning training data into uplifting notes, PIP helps users stay motivated, feel understood, and recognize that every step forward matters."
+          title: "BACKEND ARCHITECTURE & DATABASE",
+          description: "Built scalable backend using Node.js and Express.js with TypeScript. Implemented MongoDB for primary data storage and Supabase for additional cloud database needs. Designed efficient database schemas for user profiles, session history, and progress tracking. Integrated Firebase Authentication for secure user management."
         },
         {
           number: "03",
-          title: "DAILY MENTAL WELLNESS ARTICLES",
-          description: "Every day, PIP shares a selection of confidence-boosting articles that provide practical insights in a gentle, easy-to-apply way like easing nerves or practicing small conversation tips. If any piece resonates, users can save it, creating a personal library of guidance and reassurance to revisit anytime."
+          title: "FRONTEND DEVELOPMENT & HOSTING",
+          description: "Developed mobile application using React Native with Metro bundler for efficient code bundling. Implemented Material-UI for consistent and modern UI components. Deployed backend services on Amazon AWS for scalability and frontend on Vercel for optimal performance. Implemented proper state management and error handling throughout the application."
         }
       ]
     },
-    IMPACTO: {
-      title: "IMPACTO",
-      projectType: "PROJECT 1",
-      role: "LEAD UX/UI DESIGNER",
-      firstImage: "/Impacto_01.png",
-      firstDescription: "Impacto is a unified platform that simplifies grassroots activism by connecting communities with meaningful causes. Users can easily find, join, or create events and petitions in one place, supported by tools like real-time updates, a Life Map for locations, and goal tracking to help organizers run engaging, efficient activities.",
-      secondImage: "/Impacto_02.png",
-      secondDescription: "Organizing public events is overly complicated due to the difficulty of initial planning, legal compliance, and effective audience engagement. Existing platforms are inefficient for tracking support and attendance, leaving organizers unable to easily verify who is committed to the cause. Simultaneously, potential participants struggle to find relevant events across scattered platforms, face challenges in verifying organizer credibility, and feel disconnected from the community due to poor communication tools.",
+    PARKSMART: {
+      title: "PARK SMART",
+      projectType: "PROJECT 3",
+      role: "FULLSTACK DEV",
+      firstImage: "/park1.png",
+      firstDescription: "Park Smart is a full-stack web application built with JavaScript, HTML, and CSS, featuring Firebase for authentication and database management. The platform connects parking space owners with drivers, enabling seamless booking and management of parking spaces without an approval process.",
+      secondImage: "/park2.png",
+      secondDescription: "Developed using Firebase Authentication for secure user login and registration, Firebase Realtime Database for storing parking listings, bookings, and user data. Implemented Google Maps API integration for location selection and mapping. Built with vanilla JavaScript for frontend logic and Firebase SDK for backend services.",
       thirdImage: null,
-      thirdDescription: "Impacto is a unified platform for organizing and participating in events and petitions. It streamlines the process by offering a single place to find, join, or create activities. The platform enhances logistics and engagement through real-time updates via Live Chat and location tracking with Life Map. It empowers organizers with tools to track participant numbers and set petition goals, while improving the attendee experience with personalized event recommendations.",
-      featureImages: ["/Impacto_04.png"],
+      thirdDescription: "The application features a dual-user system supporting both parking space owners and drivers. Owners can list parking spaces directly without approval, set pricing and availability, and manage bookings through a comprehensive dashboard. Drivers can search for parking, filter results, book spaces, and manage their reservations. All data is synchronized in real-time using Firebase Realtime Database.",
+      featureImages: ["/park3.png"],
       features: [
         {
           number: "01",
-          title: "ROLE-BASED HOMEPAGE",
-          description: "Students, teachers, and parents see a homepage tailored to their role, with relevant tools and an age-appropriate interface."
+          title: "FIREBASE INTEGRATION & AUTHENTICATION",
+          description: "Implemented Firebase Authentication for secure user registration and login for both drivers and parking space owners. Integrated Firebase Realtime Database for storing user profiles, parking listings, bookings, and payment information. Used Firebase Storage for uploading and managing parking space photos. Implemented real-time data synchronization for live booking updates."
         },
         {
           number: "02",
-          title: "CONTENT MANAGEMENT",
-          description: "Teachers can easily organize lesson materials, homeworks, and resources all in one place. Teachers can easily organize lesson materials, homeworks, and resources all in one place."
+          title: "GOOGLE MAPS API & LOCATION SERVICES",
+          description: "Integrated Google Maps API for location selection when listing parking spaces. Implemented geocoding for address-to-coordinates conversion and reverse geocoding for display. Added distance calculation between parking spaces and user destinations. Created interactive maps for visualizing parking locations and search results."
         },
         {
           number: "03",
-          title: "SMART DASHBOARD & DATA VISUALIZATION",
-          description: "Track student progress at a glance with a dynamic dashboard that visualizes key learning data, insights, and trends in real time."
+          title: "BOOKING SYSTEM & PAYMENT PROCESSING",
+          description: "Developed a complete booking flow with car details input, date/time selection, and confirmation system. Implemented payment integration for processing booking transactions. Created notification system for booking confirmations and reminders. Built booking management dashboard for both users and owners with filtering and search capabilities."
         }
       ]
     },
-    CUBIE: {
-      title: "CUBIE",
+    FITFOUND: {
+      title: "FITFOUND",
       projectType: "PROJECT 2",
-      role: "LEAD UX/UI DESIGNER",
-      firstImage: "/Cubie_01.png",
-      firstDescription: "Cubie is a unified platform that simplifies grassroots activism by connecting communities with meaningful causes. Users can easily find, join, or create events and petitions in one place, supported by tools like real-time updates, a Life Map for locations, and goal tracking to help organizers run engaging, efficient activities.",
-      secondImage: "/Cubie_02.png",
-      secondDescription: "Organizing public events is overly complicated due to the difficulty of initial planning, legal compliance, and effective audience engagement. Existing platforms are inefficient for tracking support and attendance, leaving organizers unable to easily verify who is committed to the cause. Simultaneously, potential participants struggle to find relevant events across scattered platforms, face challenges in verifying organizer credibility, and feel disconnected from the community due to poor communication tools.",
+      role: "LEAD DEVELOPER",
+      firstImage: "/fitfound1.png",
+      firstDescription: "FitFound is a full-stack MERN application built with JavaScript, React for the frontend, and Node.js with Express.js for the backend. The platform implements a reversed hiring model where employers actively search for candidates. Features Firebase Authentication for secure user management and MongoDB for data storage.",
+      secondImage: "/fitfound2.png",
+      secondDescription: "Developed using the MERN stack (MongoDB, Express.js, React, Node.js) with JavaScript throughout the application. Implemented Firebase Authentication for user login, registration, and session management. Built RESTful APIs using Express.js for candidate search, profile management, and matching algorithms. The application uses MongoDB for flexible document-based data storage.",
       thirdImage: null,
-      thirdDescription: "Cubie is a unified platform for organizing and participating in events and petitions. It streamlines the process by offering a single place to find, join, or create activities. The platform enhances logistics and engagement through real-time updates via Live Chat and location tracking with Life Map. It empowers organizers with tools to track participant numbers and set petition goals, while improving the attendee experience with personalized event recommendations.",
-      featureImages: ["/Cubie_04.png"],
+      thirdDescription: "Built with a modular architecture using React for component-based frontend development and Express.js for backend API routes. Implemented Firebase Authentication with email/password and social login options. Created MongoDB schemas for users, job postings, and candidate profiles. Developed search and filtering functionality with efficient database queries and indexing.",
+      demoVideo: "/fitfoundDemo.mp4",
+      featureImages: ["/fitfound3.png"],
       features: [
         {
           number: "01",
-          title: "ROLE-BASED HOMEPAGE",
-          description: "Students, teachers, and parents see a homepage tailored to their role, with relevant tools and an age-appropriate interface."
+          title: "MERN STACK DEVELOPMENT",
+          description: "Built complete full-stack application using MongoDB for database, Express.js for backend API development, React for frontend user interface, and Node.js as the runtime environment. Implemented RESTful API architecture with proper routing, middleware, and error handling. Developed reusable React components for consistent UI/UX."
         },
         {
           number: "02",
-          title: "CONTENT MANAGEMENT",
-          description: "Teachers can easily organize lesson materials, homeworks, and resources all in one place."
+          title: "FIREBASE AUTHENTICATION & DATABASE",
+          description: "Integrated Firebase Authentication for secure user management including email/password authentication and social login providers. Implemented role-based access control for employers and candidates. Used MongoDB for storing user profiles, job listings, and application data with efficient querying and indexing strategies."
         },
         {
           number: "03",
-          title: "SMART DASHBOARD & DATA VISUALIZATION",
-          description: "Track student progress at a glance with a dynamic dashboard that visualizes key learning data, insights, and trends in real time."
-        }
-      ]
-    },
-    YUMMATE: {
-      title: "YUMMATE",
-      projectType: "UX PROJECT",
-      role: "UX/UI DESIGNER",
-      firstImage: "/Yummate_01.png",
-      firstDescription: "Yummate is designed to make everyday cooking easier by helping people use the ingredients they already have, apply filters that match their personal needs, and discover recipes tailored to their unique tastes and preferences.",
-      secondImage: "/Yummate_02.png",
-      secondDescription: "People often struggle to decide what to cook with the ingredients they already have, especially when they can't filter options based on their personal needs or preferences. On top of that, there's no platform that offers recipes truly tailored to individual interests, making meal planning even more frustrating.",
-      thirdImage: null,
-      thirdDescription: "Yummate helps users create quick, healthy meals tailored to their personal needs and preferences using ingredients they already have at home. It also allows users to follow others for inspiration, discovering unique recipes that encourage creativity and expand their culinary horizons beyond traditional dishes.",
-      featureImages: ["/Yummate_04.png"],
-      features: [
-        {
-          number: "01",
-          title: "INGREDIENT TO RECIPE SUGGESTIONS",
-          description: "Simply enter the ingredients you have on hand, and Yummate instantly suggests a variety of recipes you can make. No more guesswork or wasted food — just quick, personalized meal ideas that fit your pantry and your taste."
-        },
-        {
-          number: "02",
-          title: "RECIPE TO INGREDIENT LISTS",
-          description: "Choose a recipe you want to make, and Yummate instantly tells you exactly what ingredients you'll need. Easily plan your shopping or check what's already in your kitchen, so cooking becomes simple and stress-free. Easily swap ingredients based on your dietary needs, allergies, or taste preferences. Yummate suggests smart alternatives so you can enjoy any recipe your way — without compromising on flavor or nutrition."
-        },
-        {
-          number: "03",
-          title: "COMMUNITY",
-          description: "Connect with fellow food lovers by sharing your own recipes and discovering creations from the Yummate community. Like, comment, and get inspired — cooking has never been this social."
+          title: "SEARCH & MATCHING FUNCTIONALITY",
+          description: "Developed candidate search functionality with filtering, sorting, and pagination capabilities. Implemented matching algorithms to connect employers with suitable candidates based on skills and experience. Built responsive React components for search interface and result display. Created API endpoints for real-time search and profile updates."
         }
       ]
     }
@@ -144,6 +117,7 @@ export default function PipProject({ onBack, currentProject, onNextProject }: Pi
   const features = project.features;
 
   return (
+    <>
     <section className="min-h-screen bg-white pt-20 md:pt-24">
       <Container>
         {/* Back Arrow and Title */}
@@ -158,6 +132,44 @@ export default function PipProject({ onBack, currentProject, onNextProject }: Pi
             />
           </button>
           <h1 className="text-2xl md:text-6xl lg:text-7xl font-semibold uppercase">{project.title}</h1>
+          {currentProject === "PIP" && (
+            <a
+              href="https://pip-wmdd.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 cursor-pointer group mt-2"
+            >
+              <span className="text-sm md:text-base font-semibold uppercase text-black opacity-70 hover:opacity-100 transition-opacity">
+                VIEW LANDING PAGE
+              </span>
+              <Image 
+                src="/arrowSmall.png" 
+                alt="landing page arrow" 
+                width={20}
+                height={20}
+                className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity"
+              />
+            </a>
+          )}
+          {currentProject === "FITFOUND" && (
+            <a
+              href="https://fit-found.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 cursor-pointer group mt-2"
+            >
+              <span className="text-sm md:text-base font-semibold uppercase text-black opacity-70 hover:opacity-100 transition-opacity">
+                VIEW LANDING PAGE
+              </span>
+              <Image 
+                src="/arrowSmall.png" 
+                alt="landing page arrow" 
+                width={20}
+                height={20}
+                className="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity"
+              />
+            </a>
+          )}
         </div>
 
         {/* Project Type - Centered */}
@@ -188,7 +200,7 @@ export default function PipProject({ onBack, currentProject, onNextProject }: Pi
               width={1200}
               height={600}
               className={`w-full h-auto md:object-contain object-cover md:origin-center ${
-                currentProject === "IMPACTO" || currentProject === "CUBIE" || currentProject === "YUMMATE"
+                currentProject === "PARKSMART" || currentProject === "FITFOUND"
                   ? "md:max-h-[600px] lg:max-h-[700px]" 
                   : "md:max-h-[300px] md:scale-160"
               }`}
@@ -311,7 +323,7 @@ export default function PipProject({ onBack, currentProject, onNextProject }: Pi
       </Container>
         {/* Next Project */}
         {nextProject && (
-          <div className="border-t-4 border-black mt-16 p-8 ">
+          <div className="border-4 border-black mt-16 p-8 ">
             <button 
               onClick={() => onNextProject(nextProject)}
               className="flex items-center justify-end gap-2 cursor-pointer group w-full"
@@ -330,5 +342,32 @@ export default function PipProject({ onBack, currentProject, onNextProject }: Pi
           </div>
         )}
     </section>
+
+    {/* Demo Video - For PIP and FITFOUND - Outside Container */}
+    {project.demoVideo && (
+      <section className="bg-white py-8 md:py-12">
+        <Container>
+          <h2 className="text-2xl md:text-4xl lg:text-5xl text-center font-semibold uppercase mb-8">
+            DEMO
+          </h2>
+          <div className="flex flex-col items-center justify-center">
+            <div className="w-full max-w-4xl">
+              <video
+                className="w-full h-auto rounded-lg shadow-lg"
+                src={project.demoVideo}
+                controls
+                autoPlay={false}
+                loop
+                muted
+                playsInline
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </Container>
+      </section>
+    )}
+    </>
   );
 }
