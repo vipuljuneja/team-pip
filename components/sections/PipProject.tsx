@@ -199,6 +199,8 @@ export default function PipProject({ onBack, currentProject, onNextProject }: Pi
               alt={`${project.title} app mockups`}
               width={1200}
               height={600}
+              priority
+              quality={90}
               className={`w-full h-auto md:object-contain object-cover md:origin-center ${
                 currentProject === "PARKSMART" || currentProject === "FITFOUND"
                   ? "md:max-h-[600px] lg:max-h-[700px]" 
@@ -224,6 +226,8 @@ export default function PipProject({ onBack, currentProject, onNextProject }: Pi
       alt={`${project.title} features overview`}
       width={1600}
       height={1600}
+      quality={85}
+      loading="lazy"
       className="w-full h-auto object-cover"
     />
   </div>
@@ -243,6 +247,8 @@ export default function PipProject({ onBack, currentProject, onNextProject }: Pi
                 alt={`${project.title} app features`}
                 width={1200}
                 height={800}
+                quality={85}
+                loading="lazy"
                 className="w-2/3 md:w-1/2 lg:w-5/12 h-auto object-cover md:scale-130"
               />
             </div>
@@ -293,6 +299,8 @@ export default function PipProject({ onBack, currentProject, onNextProject }: Pi
                   alt={`Feature ${index + 1}`}
                   width={400}
                   height={800}
+                  quality={85}
+                  loading="lazy"
                   className="w-full h-auto shadow-lg object-cover"
                 />
               </div>

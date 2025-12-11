@@ -71,6 +71,8 @@ export default function About() {
                   alt="Vipul Juneja"
                   width={800}
                   height={800}
+                  priority
+                  quality={90}
                   className="w-full h-full object-contain"
                 />
               </div>
