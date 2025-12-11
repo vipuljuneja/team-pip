@@ -20,22 +20,34 @@ export default function About() {
 
   const experiences = [
     {
-      title: "DUBBING ARCHIVAL ASSET SPECIALIST",
-      dates: "2023 - 2024",
-      company: "@IYUNO | FREELANCE",
-      description: "Executed full-cycle Linguistic QC and ARS audits to ensure linguistic and technical accuracy of dubbed assets. Managed screen performance by optimizing Forced Narrative placement and verifying archival timecode synchronization."
-    },
-    {
       title: "PROJECT COORDINATOR",
-      dates: "2021 - 2023",
-      company: "@COMPANY | TYPE",
-      description: "Coordinated multiple projects simultaneously, ensuring timely delivery and quality standards. Managed cross-functional teams and maintained clear communication channels between stakeholders."
+      dates: "2023",
+      company: "@EBS International Documentary Festival | Freelance",
+      description: "Managed project timelines and facilitated communication with documentary creators and decision-makers. Organized pitching events to secure investment for documentary projects."
     },
     {
-      title: "CUSTOMER EXPERIENCE PROFESSIONAL",
-      dates: "2021 - 2021",
-      company: "@COMPANY | TYPE",
-      description: "Developed and maintained web applications using modern frameworks. Collaborated with senior developers to implement new features and improve existing functionality."
+      title: "ASSISTANT DIRECTOR",
+      dates: "2022 – 2023",
+      company: "@Image bakery | Full-time",
+      description: "Produced corporate brand videos and art videos for museums from planning through post-production. Oversaw all stages of production, including concept development, shooting, and editing."
+    },
+    {
+      title: "FILM RESTORATION ANALYST",
+      dates: "2022",
+      company: "@FRD | Full-time",
+      description: "Conducted pre-digital restoration of physical film materials and managed archival documentation. Prepared films for high-quality digital scanning and preservation."
+    },
+    {
+      title: "BRANDING & MARKETING COORDINATOR",
+      dates: "2021 – 2022",
+      company: "@Cooperative Cinema MM | Contract",
+      description: "Developed branding strategies and promotional campaigns for a local film cooperative. Focused on cinema branding and marketing initiatives to enhance community engagement."
+    },
+    {
+      title: "PROJECT MANAGER",
+      dates: "2019 – 2020",
+      company: "@DMZ International Documentary Film Festival | Contract",
+      description: "Managed project timelines and facilitated communication with documentary creators and decision-makers. Organized pitching events to secure investment for documentary projects."
     }
   ];
 
@@ -181,29 +193,30 @@ export default function About() {
             {/* Column 1 */}
             <div className="flex flex-col gap-4">
               <p className="text-lg md:text-xl font-semibold uppercase text-black">FIGMA</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">ILLUSTRATOR</p>
               <p className="text-lg md:text-xl font-semibold uppercase text-black">PHOTOSHOP</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">SKETCHUP</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">AFTER EFFECTS</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">INDESIGN</p>
             </div>
             {/* Column 2 */}
             <div className="flex flex-col gap-4">
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">MIRO</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">ILLUSTRATOR</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">NOMAD SCULPT</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">LIGHTROOM</p>
               <p className="text-lg md:text-xl font-semibold uppercase text-black">PREMIERE PRO</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">AFTER EFFECTS</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">FINAL CUT PRO</p>
             </div>
             {/* Column 3 */}
             <div className="flex flex-col gap-4">
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">FRAMER</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">INDESIGN</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">WOMP</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">CAPCUT</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">DAVINCI RESOLVE</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">PRO TOOLS</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">SKETCHUP</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">3DS MAX</p>
             </div>
             {/* Column 4 */}
             <div className="flex flex-col gap-4">
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">WORDPRESS</p>
-              <p className="text-lg md:text-xl font-semibold uppercase text-black">PROCREATE</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">BLENDER</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">MAYA</p>
               <p className="text-lg md:text-xl font-semibold uppercase text-black">HTML/CSS/JS</p>
+              <p className="text-lg md:text-xl font-semibold uppercase text-black">WORDPRESS</p>
             </div>
           </div>
         </Container>
