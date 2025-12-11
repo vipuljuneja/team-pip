@@ -60,7 +60,7 @@ export default function About() {
       >
         <Container >
           <p className="text-2xl md:text-4xl lg:text-5xl font-semibold leading-tight text-center">
-           Poppy Prasartset is a UX/UI and product designer specializing in user
+           Suro Kim is a UX/UI and product designer specializing in user
     experience, interaction design, and digital storytelling. She brings
     post-production and project management experience, applying narrative,
     precision, and collaboration to craft meaningful digital experiences.
@@ -76,8 +76,8 @@ export default function About() {
             <div className="flex items-start md:items-center justify-center md:order-2">
               <div className="w-full aspect-square flex items-center justify-center">
                 <Image 
-                  src="/poppy.png" 
-                  alt="Poppy Prasartset"
+                  src="/about image/Frame 508.png" 
+                  alt="Suro Kim"
                   width={800}
                   height={800}
                   className="w-full h-full object-contain"
@@ -87,7 +87,7 @@ export default function About() {
             {/* Text - Second on mobile, left on desktop (bottom-aligned) */}
             <div className="flex flex-col justify-start md:justify-end md:order-1">
               <p className="text-base md:text-lg leading-relaxed text-left">
-                Poppy focuses on UX, UI, and product design to create purposeful, inclusive, and accessible interfaces. She collaborates across disciplines to deliver consistent, user-centered experiences, while exploring 3D to add spatial and interactive depth.
+                Suro focuses on UX, UI, and product design to create purposeful, inclusive, and accessible interfaces. She collaborates across disciplines to deliver consistent, user-centered experiences, while exploring 3D to add spatial and interactive depth.
               </p>
             </div>
           </div>

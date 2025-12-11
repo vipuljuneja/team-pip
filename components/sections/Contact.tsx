@@ -23,7 +23,7 @@ export default function Contact() {
     },
     {
       label: "LINKEDIN",
-      href: "https://www.linkedin.com/in/poppy-prasartset?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+      href: "https://www.linkedin.com/in/suro-kim",
       external: true,
       isMessage: false
     },
