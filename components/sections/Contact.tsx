@@ -17,7 +17,7 @@ export default function Contact() {
   const contactItems = [
     {
       label: "RESUME",
-      href: "/V_resume.pdf",
+      href: "/poppy_resume.pdf",
       external: true,
       isMessage: false
     },
